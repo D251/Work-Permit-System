@@ -1,24 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Android.Support.V7.App;
 using Android.App;
 using Android.Content;
 using Android.OS;
-using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.Graphics.Drawables;
 using Newtonsoft.Json;
 using System.Net.NetworkInformation;
-using ManageVisitors.Models;
-using System.Threading.Tasks;
+using WorkPermitSystem.Models;
 using Firebase.Iid;
 using Android.Preferences;
-using System.Net;
+using WorkPermitSystem;
 
-namespace ManageVisitors.Activities
+namespace WorkPermitSystem.Activities
 {
     [Activity(Label = "DepartmentNewRegistrationActivity", Icon = "@drawable/icon")]
     public class DepartmentNewRegistrationActivity : AppCompatActivity

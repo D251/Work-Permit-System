@@ -12,7 +12,7 @@ using Android.Widget;
 using System.Threading.Tasks;
 using Firebase.Iid;
 
-namespace ManageVisitors.Models
+namespace WorkPermitSystem.Models
 {
     class ClsModel
     {
@@ -75,33 +75,33 @@ namespace ManageVisitors.Models
         public Nullable<System.DateTime> Date { get; set; }
     }
 
-    public class VisitorUserRegistrationModel
+    public class VendorUserRegistrationModel
     {
         public string DeviceTokenId { get; set; }
-        public long VisitorSrNo { get; set; }
-        public string VisitorUserID { get; set; }
-        public string VisitorName { get; set; }
-        public string VisitorAddress { get; set; }
-        public string VisitorContactNo { get; set; }
-        public string VisitorEmailID { get; set; }
-        public string VisitorNatureOfWork { get; set; }
-        public Nullable<long> VisitorContractorSrNo { get; set; }
-        public string VisitorContractorCoNo { get; set; }
-        public string VisitorPassword { get; set; }
-        public Nullable<System.DateTime> VisitorRegistrationDate { get; set; }
+        public long VendorSrNo { get; set; }
+        public string VendorUserID { get; set; }
+        public string VendorName { get; set; }
+        public string VendorAddress { get; set; }
+        public string VendorContactNo { get; set; }
+        public string VendorEmailID { get; set; }
+        public string VendorNatureOfWork { get; set; }
+        public Nullable<long> VendorContractorSrNo { get; set; }
+        public string VendorContractorCoNo { get; set; }
+        public string VendorPassword { get; set; }
+        public Nullable<System.DateTime> VendorRegistrationDate { get; set; }
     }
 
     public class tbl_RequestProcess
     {
         public Nullable<long> EmployeeId { get; set; }
         public long RequestProcessSrNo { get; set; }
-        public Nullable<long> VisitorSrNo { get; set; }
+        public Nullable<long> VendorSrNo { get; set; }
         public Nullable<long> EmployeeDepartmentID { get; set; }
         public Nullable<System.DateTime> VisitStartTime { get; set; }
         public Nullable<System.DateTime> VisitEndTime { get; set; }
-        public string VisitorAccessories { get; set; }
-        public Nullable<long> NoOfVisitors { get; set; }
-        public string VisitorVisitResons { get; set; }
+        public string VendorAccessories { get; set; }
+        public Nullable<long> NoOfVendors { get; set; }
+        public string VendorVisitResons { get; set; }
         public Nullable<System.DateTime> RequestProcessDate { get; set; }
         public string ActivityOwnerStatus { get; set; }
         public string AreaOwnerStatus { get; set; }
@@ -146,15 +146,15 @@ namespace ManageVisitors.Models
         public string RequestStatus { get; set; }
     }
 
-    public class ListProcessRequestByVisitorUserModel
+    public class ListProcessRequestByVendorUserModel
     {
-        public Nullable<long> VisitorSrNo { get; set; }
+        public Nullable<long> VendorSrNo { get; set; }
         public long RequestProcessSrNo { get; set; }
         public string EmployeeTokenNo { get; set; }
         public string EmployeeName { get; set; }
         public Nullable<System.DateTime> VisitStartTime { get; set; }
         public Nullable<System.DateTime> VisitEndTime { get; set; }
-        public string VisitorVisitResons { get; set; }
+        public string VendorVisitResons { get; set; }
     }
 
 
@@ -164,18 +164,18 @@ namespace ManageVisitors.Models
         public string EmployeeTokenNo { get; set; }
         public string EmployeeName { get; set; }
         public string EmployeeDepartmentName { get; set; }
-        public string VisitorName { get; set; }
+        public string VendorName { get; set; }
         public string ContractorName { get; set; }
         public string NatureOfWork { get; set; }
         public Nullable<System.DateTime> VisitStartTime { get; set; }
         public Nullable<System.DateTime> VisitEndTime { get; set; }
-        public Nullable<long> NoOfVisitors { get; set; }
-        public string VisitorVisitResons { get; set; }
+        public Nullable<long> NoOfVendors { get; set; }
+        public string VendorVisitResons { get; set; }
         public string RequestStatus { get; set; }
         public Nullable<long> EmployeeId { get; set; }
-        public Nullable<long> VisitorSrNo { get; set; }
+        public Nullable<long> VendorSrNo { get; set; }
         public Nullable<long> EmployeeDepartmentID { get; set; }
-        public string VisitorAccessories { get; set; }
+        public string VendorAccessories { get; set; }
         public Nullable<System.DateTime> RequestProcessDate { get; set; }
         public string ActivityOwnerStatus { get; set; }
         public string AreaOwnerStatus { get; set; }

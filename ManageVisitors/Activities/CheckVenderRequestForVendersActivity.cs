@@ -10,26 +10,27 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.Support.V7.App;
-using ManageVisitors.Models;
+using WorkPermitSystem.Models;
 using Newtonsoft.Json;
-using ManageVisitors.Adapter;
+using WorkPermitSystem.Adapter;
 using System.Threading;
+using WorkPermitSystem;
 
-namespace ManageVisitors.Activities
+namespace WorkPermitSystem.Activities
 {
-    [Activity(Label = "CheckVisitorRequestForVisitorsActivity")]
-    public class CheckVisitorRequestForVisitorsActivity : AppCompatActivity
+    [Activity(Label = "CheckVendorRequestForVendorsActivity")]
+    public class CheckVendorRequestForVendorsActivity : AppCompatActivity
     {
-        ListView lvVisitorRequestList;
-        TextView tvlblVisitorRequestList, lblTokenNo, lblDepartment, lblEmployeeName;
+        ListView lvVendorRequestList;
+        TextView tvlblVendorRequestList, lblTokenNo, lblDepartment, lblEmployeeName;
         ListView mListView;
-        ListProcessRequestByVisitorUserModel RPSRNO = new ListProcessRequestByVisitorUserModel();
-        List<ListProcessRequestByVisitorUserModel> ResultListProcessRequestByVisitorUserModel;
+        ListProcessRequestByVendorUserModel RPSRNO = new ListProcessRequestByVendorUserModel();
+        List<ListProcessRequestByVendorUserModel> ResultListProcessRequestByVendorUserModel;
         ProgressDialog progressDialog;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.CheckVisitorRequestForVisitorlayout);
+            SetContentView(Resource.Layout.CheckVendorRequestForVendorlayout);
 
             var toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.app_bar);
             SetSupportActionBar(toolbar);
@@ -39,7 +40,7 @@ namespace ManageVisitors.Activities
             //SupportActionBar.SetDisplayShowHomeEnabled(true);
             SupportActionBar.SetHomeButtonEnabled(true);
             
-            mListView = FindViewById<ListView>(Resource.Id.RPVisitorlistView);
+            mListView = FindViewById<ListView>(Resource.Id.RPVendorlistView);
 
             mListView.ItemClick += MListView_ItemClick;
             mListView.ItemLongClick += MListView_ItemLongClick;
@@ -47,7 +48,7 @@ namespace ManageVisitors.Activities
 
         private void MListView_ItemLongClick(object sender, AdapterView.ItemLongClickEventArgs e)
         {
-            RPSRNO = (ResultListProcessRequestByVisitorUserModel.ElementAt(e.Position));
+            RPSRNO = (ResultListProcessRequestByVendorUserModel.ElementAt(e.Position));
 
             StatusModel.RequestProcessSrNo = RPSRNO.RequestProcessSrNo.ToString();
             Intent intent = new Intent(this, typeof(RequestProcessStatusFlowActivity));
@@ -56,16 +57,16 @@ namespace ManageVisitors.Activities
 
         private void MListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
-            RPSRNO = (ResultListProcessRequestByVisitorUserModel.ElementAt(e.Position));
+            RPSRNO = (ResultListProcessRequestByVendorUserModel.ElementAt(e.Position));
 
             StatusModel.RequestProcessSrNo = RPSRNO.RequestProcessSrNo.ToString();
-            Intent intent = new Intent(this, typeof(CheckVisitorRequestDetailsForVisitorActivity));
+            Intent intent = new Intent(this, typeof(CheckVendorRequestDetailsForVendorActivity));
             this.StartActivity(intent);
         }
 
-        //private void TvlblVisitorRequestList_Click(object sender, EventArgs e)
+        //private void TvlblVendorRequestList_Click(object sender, EventArgs e)
         //{
-        //    Intent intent = new Intent(this, typeof(CheckVisitorRequestDetailsActivity));
+        //    Intent intent = new Intent(this, typeof(CheckVendorRequestDetailsActivity));
         //    this.StartActivity(intent);
         //}
 
@@ -84,29 +85,29 @@ namespace ManageVisitors.Activities
             {
                 progressDialog = ProgressDialog.Show(this, Android.Text.Html.FromHtml("<font color='#EC407A'> Please wait...</font>"), Android.Text.Html.FromHtml("<font color='#EC407A'> Checking User Info...</font>"), true);
 
-                string Url = StatusModel.Url + "GetVisitorUserInformationByVisitorUserID";
+                string Url = StatusModel.Url + "GetVendorUserInformationByVendorUserID";
                 WebHelpper _objHelper = new WebHelpper();
-                VisitorUserRegistrationModel _objVisitorUserRegistrationModel = new VisitorUserRegistrationModel();
+                VendorUserRegistrationModel _objVendorUserRegistrationModel = new VendorUserRegistrationModel();
 
-                _objVisitorUserRegistrationModel.VisitorUserID = StatusModel.LoginUserName;
+                _objVendorUserRegistrationModel.VendorUserID = StatusModel.LoginUserName;
 
-                var PostString = JsonConvert.SerializeObject(_objVisitorUserRegistrationModel);
+                var PostString = JsonConvert.SerializeObject(_objVendorUserRegistrationModel);
                 var request = await _objHelper.MakePostRequest(Url, PostString, true);
 
-                VisitorUserRegistrationModel ResultVisitorUserRegistrationModel = JsonConvert.DeserializeObject<VisitorUserRegistrationModel>(request);
+                VendorUserRegistrationModel ResultVendorUserRegistrationModel = JsonConvert.DeserializeObject<VendorUserRegistrationModel>(request);
                 
 
 
-                string Url1 = StatusModel.Url + "GetProcessRequestByVisitorUserSrNo";
+                string Url1 = StatusModel.Url + "GetProcessRequestByVendorUserSrNo";
                 WebHelpper _objHelper1 = new WebHelpper();
                
-                var PostString1 = JsonConvert.SerializeObject(ResultVisitorUserRegistrationModel);
+                var PostString1 = JsonConvert.SerializeObject(ResultVendorUserRegistrationModel);
                 var request1 = await _objHelper1.MakePostRequest(Url1, PostString1, true);
 
-                ResultListProcessRequestByVisitorUserModel = JsonConvert.DeserializeObject<List<ListProcessRequestByVisitorUserModel>>(request1);
+                ResultListProcessRequestByVendorUserModel = JsonConvert.DeserializeObject<List<ListProcessRequestByVendorUserModel>>(request1);
 
 
-                mListView.Adapter = new RPItemListForVisitorAdapter(this, ResultListProcessRequestByVisitorUserModel);
+                mListView.Adapter = new RPItemListForVendorAdapter(this, ResultListProcessRequestByVendorUserModel);
                 
                 progressDialog.Hide();
 
@@ -122,7 +123,7 @@ namespace ManageVisitors.Activities
 
         protected override void OnResume()
         {
-            SupportActionBar.SetTitle(Resource.String.VisitorsRequestList);
+            SupportActionBar.SetTitle(Resource.String.VendorsRequestList);
             GetAllEmployeeDepartmentInfoByTokenNo();
             base.OnResume();
         }

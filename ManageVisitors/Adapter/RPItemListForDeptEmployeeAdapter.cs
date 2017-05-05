@@ -8,9 +8,10 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using ManageVisitors.Models;
+using WorkPermitSystem.Models;
+using WorkPermitSystem;
 
-namespace ManageVisitors.Adapter
+namespace WorkPermitSystem.Adapter
 {
     public class RPItemListForDeptEmployeeAdapter : BaseAdapter<ListProcessRequestByDepartmentEmployeeModel>
     {
@@ -49,7 +50,7 @@ namespace ManageVisitors.Adapter
             // re-use an existing view, if one is available
             // otherwise create a new one
             if (view == null)
-                view = context.LayoutInflater.Inflate(Resource.Layout.CheckVisitorRequestListItem, parent, false);
+                view = context.LayoutInflater.Inflate(Resource.Layout.CheckVendorRequestListItem, parent, false);
 
             ListProcessRequestByDepartmentEmployeeModel item = this[position];
             if (item != null)

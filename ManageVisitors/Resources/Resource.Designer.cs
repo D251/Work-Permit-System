@@ -9,9 +9,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Android.Runtime.ResourceDesignerAttribute("ManageVisitors.Resource", IsApplication=true)]
+[assembly: global::Android.Runtime.ResourceDesignerAttribute("WorkPermitSystem.Resource", IsApplication=true)]
 
-namespace ManageVisitors
+namespace WorkPermitSystem
 {
 	
 	
@@ -2313,7 +2313,7 @@ namespace ManageVisitors
 			public const int LinearLayoutSecond = 2131427522;
 			
 			// aapt resource value: 0x7f0b009a
-			public const int RPVisitorlistView = 2131427482;
+			public const int RPVendorlistView = 2131427482;
 			
 			// aapt resource value: 0x7f0b00a4
 			public const int RPlistView = 2131427492;
@@ -2435,14 +2435,14 @@ namespace ManageVisitors
 			// aapt resource value: 0x7f0b00e0
 			public const int btnSubmitRequest = 2131427552;
 			
+			// aapt resource value: 0x7f0b00c4
+			public const int btnVendorLogIn = 2131427524;
+			
 			// aapt resource value: 0x7f0b0093
 			public const int btnViewAcceptRequest = 2131427475;
 			
 			// aapt resource value: 0x7f0b0094
 			public const int btnViewDeclineRequest = 2131427476;
-			
-			// aapt resource value: 0x7f0b00c4
-			public const int btnVisitorLogIn = 2131427524;
 			
 			// aapt resource value: 0x7f0b0052
 			public const int buttonPanel = 2131427410;
@@ -2619,19 +2619,19 @@ namespace ManageVisitors
 			public const int lblRPStartTime = 2131427479;
 			
 			// aapt resource value: 0x7f0b009c
-			public const int lblRPVisitorEmployeeName = 2131427484;
+			public const int lblRPVendorEmployeeName = 2131427484;
 			
 			// aapt resource value: 0x7f0b009e
-			public const int lblRPVisitorEndTime = 2131427486;
+			public const int lblRPVendorEndTime = 2131427486;
 			
 			// aapt resource value: 0x7f0b009f
-			public const int lblRPVisitorReason = 2131427487;
+			public const int lblRPVendorReason = 2131427487;
 			
 			// aapt resource value: 0x7f0b009b
-			public const int lblRPVisitorRequestID = 2131427483;
+			public const int lblRPVendorRequestID = 2131427483;
 			
 			// aapt resource value: 0x7f0b009d
-			public const int lblRPVisitorStartTime = 2131427485;
+			public const int lblRPVendorStartTime = 2131427485;
 			
 			// aapt resource value: 0x7f0b0099
 			public const int lblReasons = 2131427481;
@@ -2676,37 +2676,37 @@ namespace ManageVisitors
 			public const int lblViewTokenNumber = 2131427465;
 			
 			// aapt resource value: 0x7f0b0082
-			public const int lblViewVisitorContractor = 2131427458;
+			public const int lblViewVendorContractor = 2131427458;
 			
 			// aapt resource value: 0x7f0b0080
-			public const int lblViewVisitorDepartment = 2131427456;
+			public const int lblViewVendorDepartment = 2131427456;
 			
 			// aapt resource value: 0x7f0b007f
-			public const int lblViewVisitorEmployeeName = 2131427455;
+			public const int lblViewVendorEmployeeName = 2131427455;
 			
 			// aapt resource value: 0x7f0b0085
-			public const int lblViewVisitorEndTime = 2131427461;
+			public const int lblViewVendorEndTime = 2131427461;
 			
 			// aapt resource value: 0x7f0b008c
-			public const int lblViewVisitorName = 2131427468;
+			public const int lblViewVendorName = 2131427468;
 			
 			// aapt resource value: 0x7f0b0083
-			public const int lblViewVisitorNatureOfWork = 2131427459;
+			public const int lblViewVendorNatureOfWork = 2131427459;
 			
 			// aapt resource value: 0x7f0b0086
-			public const int lblViewVisitorNoofPersons = 2131427462;
+			public const int lblViewVendorNoofPersons = 2131427462;
 			
 			// aapt resource value: 0x7f0b0087
-			public const int lblViewVisitorReasons = 2131427463;
+			public const int lblViewVendorReasons = 2131427463;
 			
 			// aapt resource value: 0x7f0b007e
-			public const int lblViewVisitorRequestID = 2131427454;
+			public const int lblViewVendorRequestID = 2131427454;
 			
 			// aapt resource value: 0x7f0b0084
-			public const int lblViewVisitorStartTime = 2131427460;
+			public const int lblViewVendorStartTime = 2131427460;
 			
 			// aapt resource value: 0x7f0b0081
-			public const int lblViewVisitorVisitorName = 2131427457;
+			public const int lblViewVendorVendorName = 2131427457;
 			
 			// aapt resource value: 0x7f0b0023
 			public const int left = 2131427363;
@@ -2997,7 +2997,7 @@ namespace ManageVisitors
 			public const int txt_RequestStartTime = 2131427558;
 			
 			// aapt resource value: 0x7f0b00e9
-			public const int txt_SelectNoofVisitors = 2131427561;
+			public const int txt_SelectNoofVendors = 2131427561;
 			
 			// aapt resource value: 0x7f0b00e7
 			public const int txt_SelectRequestEndTime = 2131427559;
@@ -3006,34 +3006,34 @@ namespace ManageVisitors
 			public const int txt_TokenNumber = 2131427494;
 			
 			// aapt resource value: 0x7f0b00ef
-			public const int txt_VisitorAddress = 2131427567;
+			public const int txt_VendorAddress = 2131427567;
 			
 			// aapt resource value: 0x7f0b00f0
-			public const int txt_VisitorContactNumber = 2131427568;
+			public const int txt_VendorContactNumber = 2131427568;
 			
 			// aapt resource value: 0x7f0b00f3
-			public const int txt_VisitorContractor = 2131427571;
+			public const int txt_VendorContractor = 2131427571;
 			
 			// aapt resource value: 0x7f0b00f4
-			public const int txt_VisitorContractorContactNo = 2131427572;
+			public const int txt_VendorContractorContactNo = 2131427572;
 			
 			// aapt resource value: 0x7f0b00f1
-			public const int txt_VisitorEmailID = 2131427569;
+			public const int txt_VendorEmailID = 2131427569;
 			
 			// aapt resource value: 0x7f0b00ee
-			public const int txt_VisitorName = 2131427566;
+			public const int txt_VendorName = 2131427566;
 			
 			// aapt resource value: 0x7f0b00f2
-			public const int txt_VisitorNatureOfWork = 2131427570;
+			public const int txt_VendorNatureOfWork = 2131427570;
 			
 			// aapt resource value: 0x7f0b00f6
-			public const int txt_VisitorPassword = 2131427574;
+			public const int txt_VendorPassword = 2131427574;
 			
 			// aapt resource value: 0x7f0b00f5
-			public const int txt_VisitorUserID = 2131427573;
+			public const int txt_VendorUserID = 2131427573;
 			
 			// aapt resource value: 0x7f0b00e8
-			public const int txt_VisitorsAssociries = 2131427560;
+			public const int txt_VendorsAssociries = 2131427560;
 			
 			// aapt resource value: 0x7f0b000b
 			public const int up = 2131427339;
@@ -3197,22 +3197,22 @@ namespace ManageVisitors
 			public const int app_bar = 2130903067;
 			
 			// aapt resource value: 0x7f03001c
-			public const int CheckVisitorRequestDetailsForVisitorslayout = 2130903068;
+			public const int CheckVendorRequestDetailsForVendorslayout = 2130903068;
 			
 			// aapt resource value: 0x7f03001d
-			public const int CheckVisitorRequestDetailslayout = 2130903069;
+			public const int CheckVendorRequestDetailslayout = 2130903069;
 			
 			// aapt resource value: 0x7f03001e
-			public const int CheckVisitorRequestForVisitorlayout = 2130903070;
+			public const int CheckVendorRequestForVendorlayout = 2130903070;
 			
 			// aapt resource value: 0x7f03001f
-			public const int CheckVisitorRequestForVisitorListItem = 2130903071;
+			public const int CheckVendorRequestForVendorListItem = 2130903071;
 			
 			// aapt resource value: 0x7f030020
-			public const int CheckVisitorRequestlayout = 2130903072;
+			public const int CheckVendorRequestlayout = 2130903072;
 			
 			// aapt resource value: 0x7f030021
-			public const int CheckVisitorRequestListItem = 2130903073;
+			public const int CheckVendorRequestListItem = 2130903073;
 			
 			// aapt resource value: 0x7f030022
 			public const int DepartmentNewRegistrationlayout = 2130903074;
@@ -3332,10 +3332,10 @@ namespace ManageVisitors
 			public const int support_simple_spinner_dropdown_item = 2130903112;
 			
 			// aapt resource value: 0x7f030049
-			public const int VisitorCreateNewRequestlayout = 2130903113;
+			public const int VendorCreateNewRequestlayout = 2130903113;
 			
 			// aapt resource value: 0x7f03004a
-			public const int VisitorNewRegistrationlayout = 2130903114;
+			public const int VendorNewRegistrationlayout = 2130903114;
 			
 			static Layout()
 			{
@@ -3369,29 +3369,29 @@ namespace ManageVisitors
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f070046
-			public const int CreateNewRequest = 2131165254;
-			
-			// aapt resource value: 0x7f070044
-			public const int DepartmentEmployeeRegistration = 2131165252;
-			
 			// aapt resource value: 0x7f070042
-			public const int DepartmentLogIn = 2131165250;
+			public const int CreateNewRequest = 2131165250;
 			
-			// aapt resource value: 0x7f070049
-			public const int RequestProcessStatusFlow = 2131165257;
+			// aapt resource value: 0x7f070040
+			public const int DepartmentEmployeeRegistration = 2131165248;
 			
-			// aapt resource value: 0x7f070043
-			public const int VisitorLogIn = 2131165251;
+			// aapt resource value: 0x7f07003e
+			public const int DepartmentLogIn = 2131165246;
 			
 			// aapt resource value: 0x7f070045
-			public const int VisitorRegistration = 2131165253;
+			public const int RequestProcessStatusFlow = 2131165253;
 			
-			// aapt resource value: 0x7f070047
-			public const int VisitorsRequestList = 2131165255;
+			// aapt resource value: 0x7f07003f
+			public const int VendorLogIn = 2131165247;
 			
-			// aapt resource value: 0x7f070048
-			public const int VisitorsRequestListDetails = 2131165256;
+			// aapt resource value: 0x7f070041
+			public const int VendorRegistration = 2131165249;
+			
+			// aapt resource value: 0x7f070043
+			public const int VendorsRequestList = 2131165251;
+			
+			// aapt resource value: 0x7f070044
+			public const int VendorsRequestListDetails = 2131165252;
 			
 			// aapt resource value: 0x7f070019
 			public const int abc_action_bar_home_description = 2131165209;
@@ -3486,8 +3486,8 @@ namespace ManageVisitors
 			// aapt resource value: 0x7f07002b
 			public const int abc_toolbar_collapse_description = 2131165227;
 			
-			// aapt resource value: 0x7f07004a
-			public const int app_name = 2131165258;
+			// aapt resource value: 0x7f070046
+			public const int app_name = 2131165254;
 			
 			// aapt resource value: 0x7f070011
 			public const int appbar_scrolling_view_behavior = 2131165201;
@@ -3498,8 +3498,8 @@ namespace ManageVisitors
 			// aapt resource value: 0x7f070013
 			public const int character_counter_pattern = 2131165203;
 			
-			// aapt resource value: 0x7f07004c
-			public const int close_drawer = 2131165260;
+			// aapt resource value: 0x7f070048
+			public const int close_drawer = 2131165256;
 			
 			// aapt resource value: 0x7f070000
 			public const int common_google_play_services_enable_button = 2131165184;
@@ -3552,29 +3552,17 @@ namespace ManageVisitors
 			// aapt resource value: 0x7f07000f
 			public const int common_signin_button_text_long = 2131165199;
 			
-			// aapt resource value: 0x7f07003c
-			public const int default_web_client_id = 2131165244;
-			
-			// aapt resource value: 0x7f07003d
-			public const int firebase_database_url = 2131165245;
+			// aapt resource value: 0x7f07003b
+			public const int firebase_database_url = 2131165243;
 			
 			// aapt resource value: 0x7f07003a
 			public const int gcm_defaultSenderId = 2131165242;
 			
-			// aapt resource value: 0x7f07003e
-			public const int google_api_key = 2131165246;
+			// aapt resource value: 0x7f07003c
+			public const int google_storage_bucket = 2131165244;
 			
-			// aapt resource value: 0x7f07003b
-			public const int google_app_id = 2131165243;
-			
-			// aapt resource value: 0x7f07003f
-			public const int google_crash_reporting_api_key = 2131165247;
-			
-			// aapt resource value: 0x7f070040
-			public const int google_storage_bucket = 2131165248;
-			
-			// aapt resource value: 0x7f07004b
-			public const int open_drawer = 2131165259;
+			// aapt resource value: 0x7f070047
+			public const int open_drawer = 2131165255;
 			
 			// aapt resource value: 0x7f070014
 			public const int password_toggle_content_description = 2131165204;
@@ -3597,8 +3585,8 @@ namespace ManageVisitors
 			// aapt resource value: 0x7f07002d
 			public const int status_bar_notification_info_overflow = 2131165229;
 			
-			// aapt resource value: 0x7f070041
-			public const int strBottomLine = 2131165249;
+			// aapt resource value: 0x7f07003d
+			public const int strBottomLine = 2131165245;
 			
 			static String()
 			{

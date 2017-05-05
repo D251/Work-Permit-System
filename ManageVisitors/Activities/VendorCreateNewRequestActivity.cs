@@ -9,21 +9,22 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using ManageVisitors.Models;
+using WorkPermitSystem.Models;
 using Android.Graphics.Drawables;
 using Newtonsoft.Json;
 using Android.Views.InputMethods;
 using Android.Support.V4.Widget;
 using Android.Support.Design.Widget;
+using WorkPermitSystem;
 
-namespace ManageVisitors.Activities
+namespace WorkPermitSystem.Activities
 {
-    [Activity(Label = "VisitorCreateNewRequestActivity", Icon = "@drawable/icon")]
-    public class VisitorCreateNewRequestActivity : AppCompatActivity
+    [Activity(Label = "VendorCreateNewRequestActivity", Icon = "@drawable/icon")]
+    public class VendorCreateNewRequestActivity : AppCompatActivity
     {
         tbl_RequestProcess _ObjRequestProcess = new tbl_RequestProcess();
         Button btnSendRequest, btnRequestCancel;
-        EditText txt_Associries, txt_NoOFVisitors, txt_Reasons;
+        EditText txt_Associries, txt_NoOFVendors, txt_Reasons;
         TextView dtp_RequestStartTime, dtp_RequestEndTime, txt_EmployeeDepartmentID;
         AutoCompleteTextView txt_EmployeeName;
         List<GetAllDepartmentEmployeeNameModel> ResultGetAllDepartmentEmployeeNameModel = new List<GetAllDepartmentEmployeeNameModel>();
@@ -34,7 +35,7 @@ namespace ManageVisitors.Activities
         {
             base.OnCreate(savedInstanceState);
 
-            SetContentView(Resource.Layout.VisitorCreateNewRequestlayout);
+            SetContentView(Resource.Layout.VendorCreateNewRequestlayout);
 
             var toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.app_bar);
             SetSupportActionBar(toolbar);
@@ -62,8 +63,8 @@ namespace ManageVisitors.Activities
             txt_EmployeeDepartmentID = FindViewById<TextView>(Resource.Id.txt_RequestDepartment);
             dtp_RequestStartTime = FindViewById<TextView>(Resource.Id.txt_RequestStartTime);
             dtp_RequestEndTime = FindViewById<TextView>(Resource.Id.txt_SelectRequestEndTime);
-            txt_Associries = FindViewById<EditText>(Resource.Id.txt_VisitorsAssociries);
-            txt_NoOFVisitors = FindViewById<EditText>(Resource.Id.txt_SelectNoofVisitors);
+            txt_Associries = FindViewById<EditText>(Resource.Id.txt_VendorsAssociries);
+            txt_NoOFVendors = FindViewById<EditText>(Resource.Id.txt_SelectNoofVendors);
             txt_Reasons = FindViewById<EditText>(Resource.Id.txt_RequestReason);
 
             dtp_RequestEndTime.Click += Dtp_RequestEndTime_Click;
@@ -171,7 +172,7 @@ namespace ManageVisitors.Activities
                             {
                                 if (txt_Associries.Text != "")
                                 {
-                                    if (txt_NoOFVisitors.Text != "")
+                                    if (txt_NoOFVendors.Text != "")
                                     {
                                         if (txt_Reasons.Text != "")
                                         {
@@ -188,25 +189,25 @@ namespace ManageVisitors.Activities
                                             progressDialog = ProgressDialog.Show(this, Android.Text.Html.FromHtml("<font color='#EC407A'> Please wait...</font>"), Android.Text.Html.FromHtml("<font color='#EC407A'> Creating New Request...</font>"), true);
 
 
-                                            string Url = StatusModel.Url + "GetVisitorUserInformationByVisitorUserID";
+                                            string Url = StatusModel.Url + "GetVendorUserInformationByVendorUserID";
                                             WebHelpper _objHelper = new WebHelpper();
-                                            VisitorUserRegistrationModel _objVisitorUserRegistrationModel = new VisitorUserRegistrationModel();
+                                            VendorUserRegistrationModel _objVendorUserRegistrationModel = new VendorUserRegistrationModel();
 
-                                            _objVisitorUserRegistrationModel.VisitorUserID = StatusModel.LoginUserName;
+                                            _objVendorUserRegistrationModel.VendorUserID = StatusModel.LoginUserName;
 
-                                            var PostString = JsonConvert.SerializeObject(_objVisitorUserRegistrationModel);
+                                            var PostString = JsonConvert.SerializeObject(_objVendorUserRegistrationModel);
                                             var request = await _objHelper.MakePostRequest(Url, PostString, true);
 
-                                            VisitorUserRegistrationModel ResultVisitorUserRegistrationModel = JsonConvert.DeserializeObject<VisitorUserRegistrationModel>(request);
+                                            VendorUserRegistrationModel ResultVendorUserRegistrationModel = JsonConvert.DeserializeObject<VendorUserRegistrationModel>(request);
 
 
 
-                                            _ObjRequestProcess.VisitorSrNo = ResultVisitorUserRegistrationModel.VisitorSrNo;
+                                            _ObjRequestProcess.VendorSrNo = ResultVendorUserRegistrationModel.VendorSrNo;
                                             _ObjRequestProcess.VisitStartTime = Convert.ToDateTime(dtp_RequestStartTime.Text);
                                             _ObjRequestProcess.VisitEndTime = Convert.ToDateTime(dtp_RequestEndTime.Text);
-                                            _ObjRequestProcess.VisitorAccessories = txt_Associries.Text;
-                                            _ObjRequestProcess.NoOfVisitors = Convert.ToInt32(txt_NoOFVisitors.Text);
-                                            _ObjRequestProcess.VisitorVisitResons = txt_Reasons.Text;
+                                            _ObjRequestProcess.VendorAccessories = txt_Associries.Text;
+                                            _ObjRequestProcess.NoOfVendors = Convert.ToInt32(txt_NoOFVendors.Text);
+                                            _ObjRequestProcess.VendorVisitResons = txt_Reasons.Text;
                                             _ObjRequestProcess.RequestProcessDate  = Convert.ToDateTime(DateTime.Now.ToString("dd/MM/yyyy hh:mm:ss tt"));
                                             _ObjRequestProcess.ActivityOwnerStatus = "None";
                                             _ObjRequestProcess.AreaOwnerStatus = "None";
@@ -245,8 +246,8 @@ namespace ManageVisitors.Activities
                                     }
                                     else
                                     {
-                                        txt_NoOFVisitors.RequestFocus();
-                                        txt_NoOFVisitors.SetError("Please Select No of Visitors First", icon_error);
+                                        txt_NoOFVendors.RequestFocus();
+                                        txt_NoOFVendors.SetError("Please Select No of Vendors First", icon_error);
                                     }
                                 }
                                 else
@@ -294,7 +295,7 @@ namespace ManageVisitors.Activities
             dtp_RequestStartTime.Text = "";
             dtp_RequestEndTime.Text = "";
             txt_Associries.Text = "";
-            txt_NoOFVisitors.Text = "";
+            txt_NoOFVendors.Text = "";
             txt_Reasons.Text = "";
         }
 
@@ -338,7 +339,7 @@ namespace ManageVisitors.Activities
             switch (e.MenuItem.ItemId)
             {
                 case (Resource.Id.nav_send_request):
-                    StartActivity(new Intent(this, typeof(CheckVisitorRequestForVisitorsActivity)));
+                    StartActivity(new Intent(this, typeof(CheckVendorRequestForVendorsActivity)));
                     break;
             }
             // Close drawer

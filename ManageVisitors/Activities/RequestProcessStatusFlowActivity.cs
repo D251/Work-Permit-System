@@ -5,15 +5,16 @@ using Android.Support.V7.App;
 using Firebase.Messaging;
 using Firebase.Iid;
 using System.Threading.Tasks;
-using ManageVisitors.Models;
+using WorkPermitSystem.Models;
 using Newtonsoft.Json;
 using System;
 using Android.Nfc;
 using Android.Views;
 using Android.Content;
 using Android.Preferences;
+using WorkPermitSystem;
 
-namespace ManageVisitors.Activities
+namespace WorkPermitSystem.Activities
 {
     [Activity(Label = "RequestProcessStatusFlowActivity")]
     public class RequestProcessStatusFlowActivity : AppCompatActivity
@@ -81,14 +82,14 @@ namespace ManageVisitors.Activities
                 tbl_RequestProcess _objRequestProcessModel = new tbl_RequestProcess();
 
                 _objRequestProcessModel.EmployeeId = ResultProcessRequestDetailsByRequestIDModel.EmployeeId;
-                _objRequestProcessModel.VisitorSrNo = ResultProcessRequestDetailsByRequestIDModel.VisitorSrNo;
+                _objRequestProcessModel.VendorSrNo = ResultProcessRequestDetailsByRequestIDModel.VendorSrNo;
                 _objRequestProcessModel.RequestProcessSrNo = ResultProcessRequestDetailsByRequestIDModel.RequestProcessSrNo;
                 _objRequestProcessModel.EmployeeDepartmentID = ResultProcessRequestDetailsByRequestIDModel.EmployeeDepartmentID;
                 _objRequestProcessModel.VisitStartTime = ResultProcessRequestDetailsByRequestIDModel.VisitStartTime;
                 _objRequestProcessModel.VisitEndTime = ResultProcessRequestDetailsByRequestIDModel.VisitEndTime;
-                _objRequestProcessModel.VisitorAccessories = ResultProcessRequestDetailsByRequestIDModel.VisitorAccessories;
-                _objRequestProcessModel.NoOfVisitors = ResultProcessRequestDetailsByRequestIDModel.NoOfVisitors;
-                _objRequestProcessModel.VisitorVisitResons = ResultProcessRequestDetailsByRequestIDModel.VisitorVisitResons;
+                _objRequestProcessModel.VendorAccessories = ResultProcessRequestDetailsByRequestIDModel.VendorAccessories;
+                _objRequestProcessModel.NoOfVendors = ResultProcessRequestDetailsByRequestIDModel.NoOfVendors;
+                _objRequestProcessModel.VendorVisitResons = ResultProcessRequestDetailsByRequestIDModel.VendorVisitResons;
                 _objRequestProcessModel.RequestProcessDate = ResultProcessRequestDetailsByRequestIDModel.RequestProcessDate;
 
                 if (ButtonAcceptOrDecline == "Decline")
