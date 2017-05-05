@@ -10,16 +10,16 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.Graphics.Drawables;
-using ManageVisitors.Models;
+using WorkPermitSystem.Models;
 using Android.Support.V7.App;
 using Newtonsoft.Json;
 using Firebase.Messaging;
 using Firebase.Iid;
 using Android.Util;
 using Android.Gms.Common;
+using WorkPermitSystem;
 
-
-namespace ManageVisitors.Activities
+namespace WorkPermitSystem.Activities
 {
     [Activity(Label = "LogInActivity")]
     [Service]
@@ -71,7 +71,7 @@ namespace ManageVisitors.Activities
             {
                
                 StatusModel.LoginUserStatus = 1;
-                Intent intent = new Intent(this, typeof(VisitorNewRegistrationActivity));
+                Intent intent = new Intent(this, typeof(VendorNewRegistrationActivity));
                 this.StartActivity(intent);
             }
            
@@ -137,7 +137,7 @@ namespace ManageVisitors.Activities
                                 clear();
                                 progressDialog.Hide();
                                 Toast.MakeText(this, ResultgetRequest.msg, ToastLength.Short).Show();
-                                Intent intent = new Intent(this, typeof(CheckVisitorRequestActivity));
+                                Intent intent = new Intent(this, typeof(CheckVendorRequestActivity));
                                 this.StartActivity(intent);
                             }
 
@@ -153,7 +153,7 @@ namespace ManageVisitors.Activities
                         {
                             WebHelpper _objHelper = new WebHelpper();
 
-                            string Url = StatusModel.Url + "VisitorLogIn";
+                            string Url = StatusModel.Url + "VendorLogIn";
 
                             progressDialog = ProgressDialog.Show(this, Android.Text.Html.FromHtml("<font color='#EC407A'> Please wait...</font>"), Android.Text.Html.FromHtml("<font color='#EC407A'> Checking User Info...</font>"), true);
 
@@ -167,7 +167,7 @@ namespace ManageVisitors.Activities
                                 clear();
                                 progressDialog.Hide();
                                 Toast.MakeText(this, ResultgetRequest.msg, ToastLength.Short).Show();
-                                Intent intent = new Intent(this, typeof(VisitorCreateNewRequestActivity));
+                                Intent intent = new Intent(this, typeof(VendorCreateNewRequestActivity));
                                 this.StartActivity(intent);
                             }
 
@@ -225,7 +225,7 @@ namespace ManageVisitors.Activities
             {
                 StatusModel.LoginUserStatus = 1;
                 txt_UserName.Text = "M&M";
-                SupportActionBar.SetTitle(Resource.String.VisitorLogIn);
+                SupportActionBar.SetTitle(Resource.String.VendorLogIn);
             }
             else
             {

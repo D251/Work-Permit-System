@@ -4,9 +4,9 @@ using Android.Content;
 using Android.Media;
 using Android.Support.V4.App;
 using Firebase.Messaging;
-using ManageVisitors.Activities;
+using WorkPermitSystem.Activities;
 
-namespace ManageVisitors
+namespace WorkPermitSystem
 {
     [Service]
     [IntentFilter(new[] { "com.google.firebase.MESSAGING_EVENT" })]
@@ -43,7 +43,7 @@ namespace ManageVisitors
             var defaultSoundUri = RingtoneManager.GetDefaultUri(RingtoneType.Notification);
             var notificationBuilder = new NotificationCompat.Builder(this)
                 .SetSmallIcon(Resource.Drawable.mahindralogo)
-                .SetContentTitle("Manage Visitors")
+                .SetContentTitle("Manage Vendors")
                 .SetContentText(messageBody)
                 .SetAutoCancel(true)
                 .SetSound(defaultSoundUri)

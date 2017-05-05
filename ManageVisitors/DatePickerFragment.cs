@@ -10,7 +10,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 
-namespace ManageVisitors
+namespace WorkPermitSystem
 {
     class TimePickerFragment : DialogFragment,
                                    TimePickerDialog.IOnTimeSetListener

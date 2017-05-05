@@ -12,9 +12,9 @@ using Android.Widget;
 using Firebase.Iid;
 using Android.Preferences;
 using Newtonsoft.Json;
-using ManageVisitors.Models;
+using WorkPermitSystem.Models;
 
-namespace ManageVisitors
+namespace WorkPermitSystem
 {
     [Service]
     [IntentFilter(new[] { "com.google.firebase.INSTANCE_ID_EVENT" })]
@@ -47,7 +47,7 @@ namespace ManageVisitors
             }
             else if (LoginUserStatus == 1)
             {
-                SendRegistrationToServerForVisitor(refreshedToken, USERID);
+                SendRegistrationToServerForVendor(refreshedToken, USERID);
 
             }
 
@@ -61,18 +61,18 @@ namespace ManageVisitors
          * Modify this method to associate the user's FCM InstanceID token with any server-side account
          * maintained by your application.
          */
-        async void SendRegistrationToServerForVisitor(string token, string UserID)
+        async void SendRegistrationToServerForVendor(string token, string UserID)
         {
           
-            VisitorUserRegistrationModel _objVisitorUserRegistrationModel = new VisitorUserRegistrationModel();
+            VendorUserRegistrationModel _objVendorUserRegistrationModel = new VendorUserRegistrationModel();
 
-            _objVisitorUserRegistrationModel.DeviceTokenId = token.Trim();
-            _objVisitorUserRegistrationModel.VisitorUserID = UserID.Trim();
+            _objVendorUserRegistrationModel.DeviceTokenId = token.Trim();
+            _objVendorUserRegistrationModel.VendorUserID = UserID.Trim();
 
-            string Url = StatusModel.Url + "UpdateVisitorDeviceTokenNumber";
+            string Url = StatusModel.Url + "UpdateVendorDeviceTokenNumber";
             WebHelpper _objHelper = new WebHelpper();
 
-            var PostString = JsonConvert.SerializeObject(_objVisitorUserRegistrationModel);
+            var PostString = JsonConvert.SerializeObject(_objVendorUserRegistrationModel);
             var request = await _objHelper.MakePostRequest(Url, PostString, true);
 
             ResultModel ResultgetRequest = JsonConvert.DeserializeObject<ResultModel>(request);

@@ -10,8 +10,8 @@
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ManageVisitors</RootNamespace>
-    <AssemblyName>ManageVisitors</AssemblyName>
+    <RootNamespace>WorkPermitSystem</RootNamespace>
+    <AssemblyName>WorkPermitSystem</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <AndroidApplication>true</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
@@ -140,17 +140,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Activities\RequestProcessStatusFlowActivity.cs" />
-    <Compile Include="Activities\CheckVisitorRequestForVisitorsActivity.cs" />
-    <Compile Include="Activities\CheckVisitorRequestActivity.cs" />
-    <Compile Include="Activities\CheckVisitorRequestDetailsForVisitorActivity.cs" />
-    <Compile Include="Activities\CheckVisitorRequestDetailsActivity.cs" />
-    <Compile Include="Activities\VisitorCreateNewRequestActivity.cs" />
+    <Compile Include="Activities\CheckVenderRequestForVendersActivity.cs" />
+    <Compile Include="Activities\CheckVenderRequestActivity.cs" />
+    <Compile Include="Activities\CheckVenderRequestDetailsForVenderActivity.cs" />
+    <Compile Include="Activities\CheckVenderRequestDetailsActivity.cs" />
+    <Compile Include="Activities\VendorCreateNewRequestActivity.cs" />
     <Compile Include="Activities\DepartmentNewRegistrationActivity.cs" />
     <Compile Include="Activities\LogInActivity.cs" />
     <Compile Include="Activities\LogInMainActivity.cs" />
     <Compile Include="Activities\MainActivity.cs" />
-    <Compile Include="Activities\VisitorNewRegistrationActivity.cs" />
-    <Compile Include="Adapter\RPItemListForVisitorAdapter.cs" />
+    <Compile Include="Activities\VendorNewRegistrationActivity.cs" />
+    <Compile Include="Adapter\RPItemListForVenderAdapter.cs" />
     <Compile Include="Adapter\RPItemListForDeptEmployeeAdapter.cs" />
     <Compile Include="DatePickerFragment.cs" />
     <Compile Include="Models\ClsModel.cs" />
@@ -175,28 +175,28 @@
     <AndroidResource Include="Resources\layout\LogInMainlayout.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\VisitorNewRegistrationlayout.axml">
+    <AndroidResource Include="Resources\layout\VendorNewRegistrationlayout.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\VisitorCreateNewRequestlayout.axml">
+    <AndroidResource Include="Resources\layout\VendorCreateNewRequestlayout.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\CheckVisitorRequestlayout.axml">
+    <AndroidResource Include="Resources\layout\CheckVendorRequestlayout.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\CheckVisitorRequestDetailslayout.axml">
+    <AndroidResource Include="Resources\layout\CheckVendorRequestDetailslayout.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\CheckVisitorRequestListItem.axml">
+    <AndroidResource Include="Resources\layout\CheckVendorRequestListItem.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\CheckVisitorRequestForVisitorlayout.axml">
+    <AndroidResource Include="Resources\layout\CheckVendorRequestForVendorlayout.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\CheckVisitorRequestForVisitorListItem.axml">
+    <AndroidResource Include="Resources\layout\CheckVendorRequestForVendorListItem.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\CheckVisitorRequestDetailsForVisitorslayout.axml">
+    <AndroidResource Include="Resources\layout\CheckVendorRequestDetailsForVendorslayout.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\RequestProcessStatusFlowlayout.axml">

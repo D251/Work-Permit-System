@@ -10,23 +10,24 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.Support.V7.App;
-using ManageVisitors.Models;
+using WorkPermitSystem.Models;
 using Newtonsoft.Json;
+using WorkPermitSystem;
 
-namespace ManageVisitors.Activities
+namespace WorkPermitSystem.Activities
 {
-    [Activity(Label = "CheckVisitorRequestDetailsActivity")]
-    public class CheckVisitorRequestDetailsActivity : AppCompatActivity
+    [Activity(Label = "CheckVendorRequestDetailsActivity")]
+    public class CheckVendorRequestDetailsActivity : AppCompatActivity
     {
         Button btnViewRequestAccept, btnViewRequestDecline;
-        TextView tvRequestID, tvTokenNo, tvEmployeeName, tvDepartment, tvVisitorNAme, tvContractor, tvNatureOfWork, tvStartTime, tvEndTime, tvNoOfPerson, tvReasons;
+        TextView tvRequestID, tvTokenNo, tvEmployeeName, tvDepartment, tvVendorNAme, tvContractor, tvNatureOfWork, tvStartTime, tvEndTime, tvNoOfPerson, tvReasons;
         ProcessRequestDetailsByRequestIDModel ResultProcessRequestDetailsByRequestIDModel;
         string ButtonAcceptOrDecline = "";
         ProgressDialog progressDialog;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.CheckVisitorRequestDetailslayout);
+            SetContentView(Resource.Layout.CheckVendorRequestDetailslayout);
 
             var toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.app_bar);
             SetSupportActionBar(toolbar);
@@ -42,7 +43,7 @@ namespace ManageVisitors.Activities
             tvTokenNo = FindViewById<TextView>(Resource.Id.lblViewTokenNumber);
             tvEmployeeName = FindViewById<TextView>(Resource.Id.lblViewEmployeeName);
             tvDepartment = FindViewById<TextView>(Resource.Id.lblViewDepartment);
-            tvVisitorNAme = FindViewById<TextView>(Resource.Id.lblViewVisitorName);
+            tvVendorNAme = FindViewById<TextView>(Resource.Id.lblViewVendorName);
             tvContractor = FindViewById<TextView>(Resource.Id.lblViewContractor);
             tvNatureOfWork = FindViewById<TextView>(Resource.Id.lblViewNatureOfWork);
             tvStartTime = FindViewById<TextView>(Resource.Id.lblViewStartTime);
@@ -77,14 +78,14 @@ namespace ManageVisitors.Activities
                 tbl_RequestProcess _objRequestProcessModel = new tbl_RequestProcess();
 
                 _objRequestProcessModel.EmployeeId = ResultProcessRequestDetailsByRequestIDModel.EmployeeId;
-                _objRequestProcessModel.VisitorSrNo = ResultProcessRequestDetailsByRequestIDModel.VisitorSrNo;
+                _objRequestProcessModel.VendorSrNo = ResultProcessRequestDetailsByRequestIDModel.VendorSrNo;
                 _objRequestProcessModel.RequestProcessSrNo = ResultProcessRequestDetailsByRequestIDModel.RequestProcessSrNo;
                 _objRequestProcessModel.EmployeeDepartmentID = ResultProcessRequestDetailsByRequestIDModel.EmployeeDepartmentID;
                 _objRequestProcessModel.VisitStartTime = ResultProcessRequestDetailsByRequestIDModel.VisitStartTime;
                 _objRequestProcessModel.VisitEndTime = ResultProcessRequestDetailsByRequestIDModel.VisitEndTime;
-                _objRequestProcessModel.VisitorAccessories = ResultProcessRequestDetailsByRequestIDModel.VisitorAccessories;
-                _objRequestProcessModel.NoOfVisitors = ResultProcessRequestDetailsByRequestIDModel.NoOfVisitors;
-                _objRequestProcessModel.VisitorVisitResons = ResultProcessRequestDetailsByRequestIDModel.VisitorVisitResons;
+                _objRequestProcessModel.VendorAccessories = ResultProcessRequestDetailsByRequestIDModel.VendorAccessories;
+                _objRequestProcessModel.NoOfVendors = ResultProcessRequestDetailsByRequestIDModel.NoOfVendors;
+                _objRequestProcessModel.VendorVisitResons = ResultProcessRequestDetailsByRequestIDModel.VendorVisitResons;
                 _objRequestProcessModel.RequestProcessDate = ResultProcessRequestDetailsByRequestIDModel.RequestProcessDate;
 
                 if (ButtonAcceptOrDecline == "Decline")
@@ -224,13 +225,13 @@ namespace ManageVisitors.Activities
                 tvTokenNo.Text = ResultProcessRequestDetailsByRequestIDModel.EmployeeTokenNo;
                 tvEmployeeName.Text = ResultProcessRequestDetailsByRequestIDModel.EmployeeName;
                 tvDepartment.Text = ResultProcessRequestDetailsByRequestIDModel.EmployeeDepartmentName;
-                tvVisitorNAme.Text = ResultProcessRequestDetailsByRequestIDModel.VisitorName;
+                tvVendorNAme.Text = ResultProcessRequestDetailsByRequestIDModel.VendorName;
                 tvContractor.Text = ResultProcessRequestDetailsByRequestIDModel.ContractorName;
                 tvNatureOfWork.Text = ResultProcessRequestDetailsByRequestIDModel.NatureOfWork;
                 tvStartTime.Text = ResultProcessRequestDetailsByRequestIDModel.VisitStartTime.ToString();
                 tvEndTime.Text = ResultProcessRequestDetailsByRequestIDModel.VisitEndTime.ToString();
-                tvNoOfPerson.Text = ResultProcessRequestDetailsByRequestIDModel.NoOfVisitors.ToString();
-                tvReasons.Text = ResultProcessRequestDetailsByRequestIDModel.VisitorVisitResons;
+                tvNoOfPerson.Text = ResultProcessRequestDetailsByRequestIDModel.NoOfVendors.ToString();
+                tvReasons.Text = ResultProcessRequestDetailsByRequestIDModel.VendorVisitResons;
                 progressDialog.Hide();
             }
             catch (Exception e)
@@ -244,7 +245,7 @@ namespace ManageVisitors.Activities
 
         protected override void OnResume()
         {
-            SupportActionBar.SetTitle(Resource.String.VisitorsRequestListDetails);
+            SupportActionBar.SetTitle(Resource.String.VendorsRequestListDetails);
             RequestDetailsByRequestID();
             base.OnResume();
         }

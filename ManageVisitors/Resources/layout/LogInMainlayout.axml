@@ -44,8 +44,8 @@
                     style="@style/button_text"
                     android:layout_weight="0.5" />
                 <Button
-                    android:text="VISITOR LOGIN"
-                    android:id="@+id/btnVisitorLogIn"
+                    android:text="Vendor LOGIN"
+                    android:id="@+id/btnVendorLogIn"
                     android:textSize="20dp"
                     android:background="@drawable/red_button"
                     android:layout_width="fill_parent"

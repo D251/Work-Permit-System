@@ -10,17 +10,18 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.Support.V7.App;
-using ManageVisitors.Models;
+using WorkPermitSystem.Models;
 using Newtonsoft.Json;
-using ManageVisitors.Adapter;
+using WorkPermitSystem.Adapter;
+using WorkPermitSystem;
 
-namespace ManageVisitors.Activities
+namespace WorkPermitSystem.Activities
 {
-    [Activity(Label = "CheckVisitorRequestActivity")]
-    public class CheckVisitorRequestActivity : AppCompatActivity
+    [Activity(Label = "CheckVendorRequestActivity")]
+    public class CheckVendorRequestActivity : AppCompatActivity
     {
-        ListView lvVisitorRequestList;
-        TextView tvlblVisitorRequestList, lblTokenNo, lblDepartment, lblEmployeeName;
+        ListView lvVendorRequestList;
+        TextView tvlblVendorRequestList, lblTokenNo, lblDepartment, lblEmployeeName;
         ListView mListView;
         ListProcessRequestByDepartmentEmployeeModel RPSRNO = new ListProcessRequestByDepartmentEmployeeModel();
         List<ListProcessRequestByDepartmentEmployeeModel> ResultListProcessRequestByDepartmentEmployeeModel;
@@ -28,7 +29,7 @@ namespace ManageVisitors.Activities
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.CheckVisitorRequestlayout);
+            SetContentView(Resource.Layout.CheckVendorRequestlayout);
 
             var toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.app_bar);
             SetSupportActionBar(toolbar);
@@ -51,13 +52,13 @@ namespace ManageVisitors.Activities
              RPSRNO = (ResultListProcessRequestByDepartmentEmployeeModel.ElementAt(e.Position));
 
             StatusModel.RequestProcessSrNo = RPSRNO.RequestProcessSrNo.ToString();
-            Intent intent = new Intent(this, typeof(CheckVisitorRequestDetailsActivity));
+            Intent intent = new Intent(this, typeof(CheckVendorRequestDetailsActivity));
             this.StartActivity(intent);
         }
 
-        //private void TvlblVisitorRequestList_Click(object sender, EventArgs e)
+        //private void TvlblVendorRequestList_Click(object sender, EventArgs e)
         //{
-        //    Intent intent = new Intent(this, typeof(CheckVisitorRequestDetailsActivity));
+        //    Intent intent = new Intent(this, typeof(CheckVendorRequestDetailsActivity));
         //    this.StartActivity(intent);
         //}
 
@@ -114,7 +115,7 @@ namespace ManageVisitors.Activities
 
         protected override void OnResume()
         {
-            SupportActionBar.SetTitle(Resource.String.VisitorsRequestList);
+            SupportActionBar.SetTitle(Resource.String.VendorsRequestList);
             GetAllEmployeeDepartmentInfoByTokenNo();
             base.OnResume();
         }

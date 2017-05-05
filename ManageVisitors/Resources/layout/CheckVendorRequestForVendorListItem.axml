@@ -18,7 +18,7 @@
             android:gravity="center_vertical|center"
             android:layout_gravity="center_vertical|left"
             android:layout_centerInParent="true"
-            android:id="@+id/lblRPVisitorRequestID"
+            android:id="@+id/lblRPVendorRequestID"
             android:background="@drawable/rounded_withoutcorner" />
         <TextView
             android:layout_width="0dip"
@@ -29,7 +29,7 @@
             android:gravity="center_vertical|center"
             android:layout_gravity="center_vertical|left"
             android:layout_centerInParent="true"
-            android:id="@+id/lblRPVisitorEmployeeName"
+            android:id="@+id/lblRPVendorEmployeeName"
             android:background="@drawable/rounded_withoutcorner" />
         <TextView
             android:layout_width="0dip"
@@ -40,7 +40,7 @@
             android:gravity="center_vertical|center"
             android:layout_gravity="center_vertical|left"
             android:layout_centerInParent="true"
-            android:id="@+id/lblRPVisitorStartTime"
+            android:id="@+id/lblRPVendorStartTime"
             android:background="@drawable/rounded_withoutcorner" />
         <TextView
             android:layout_width="0dip"
@@ -51,7 +51,7 @@
             android:gravity="center_vertical|center"
             android:layout_gravity="center_vertical|left"
             android:layout_centerInParent="true"
-            android:id="@+id/lblRPVisitorEndTime"
+            android:id="@+id/lblRPVendorEndTime"
             android:background="@drawable/rounded_withoutcorner" />
         <TextView
             android:layout_width="0dip"
@@ -62,7 +62,7 @@
             android:gravity="center_vertical|center"
             android:layout_gravity="center_vertical|left"
             android:layout_centerInParent="true"
-            android:id="@+id/lblRPVisitorReason"
+            android:id="@+id/lblRPVendorReason"
             android:background="@drawable/rounded_withoutcorner" />
     </LinearLayout>
 </LinearLayout>
