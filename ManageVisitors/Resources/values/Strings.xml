@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="strBottomLine"></string>
+  <string name="DepartmentLogIn">Department LogIn</string>
+  <string name="VisitorLogIn">Visitor LogIn</string>
+  <string name="DepartmentEmployeeRegistration">Employee Registration</string>
+  <string name="VisitorRegistration">Visitor Registration</string>
+  <string name="CreateNewRequest">Create New Request</string>
+  <string name="VisitorsRequestList">Visitors Request List</string>
+  <string name="VisitorsRequestListDetails">Request Details</string>
+  <string name="RequestProcessStatusFlow">Status Flow</string>
+  <string name="app_name">Manage Visitors</string>
+  <string name="open_drawer">Open drawer</string>
+  <string name="close_drawer">Close drawer</string>
+</resources>
