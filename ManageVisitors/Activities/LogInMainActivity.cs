@@ -16,7 +16,7 @@ using WorkPermitSystem;
 
 namespace WorkPermitSystem.Activities
 {
-    [Activity(Label = "ManageVendors", MainLauncher = true, Icon = "@drawable/mahindralogo")]
+    [Activity(Label = "WPS", MainLauncher = true, Icon = "@drawable/mahindralogo")]
     public class LogInMainActivity : Activity
     {
         Button btnDepartmentLogIn, btnVendorLogIn;

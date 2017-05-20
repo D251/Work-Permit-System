@@ -3369,29 +3369,29 @@ namespace WorkPermitSystem
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f070042
-			public const int CreateNewRequest = 2131165250;
-			
-			// aapt resource value: 0x7f070040
-			public const int DepartmentEmployeeRegistration = 2131165248;
-			
-			// aapt resource value: 0x7f07003e
-			public const int DepartmentLogIn = 2131165246;
-			
-			// aapt resource value: 0x7f070045
-			public const int RequestProcessStatusFlow = 2131165253;
-			
-			// aapt resource value: 0x7f07003f
-			public const int VendorLogIn = 2131165247;
-			
-			// aapt resource value: 0x7f070041
-			public const int VendorRegistration = 2131165249;
-			
-			// aapt resource value: 0x7f070043
-			public const int VendorsRequestList = 2131165251;
+			// aapt resource value: 0x7f070046
+			public const int CreateNewRequest = 2131165254;
 			
 			// aapt resource value: 0x7f070044
-			public const int VendorsRequestListDetails = 2131165252;
+			public const int DepartmentEmployeeRegistration = 2131165252;
+			
+			// aapt resource value: 0x7f070042
+			public const int DepartmentLogIn = 2131165250;
+			
+			// aapt resource value: 0x7f070049
+			public const int RequestProcessStatusFlow = 2131165257;
+			
+			// aapt resource value: 0x7f070043
+			public const int VendorLogIn = 2131165251;
+			
+			// aapt resource value: 0x7f070045
+			public const int VendorRegistration = 2131165253;
+			
+			// aapt resource value: 0x7f070047
+			public const int VendorsRequestList = 2131165255;
+			
+			// aapt resource value: 0x7f070048
+			public const int VendorsRequestListDetails = 2131165256;
 			
 			// aapt resource value: 0x7f070019
 			public const int abc_action_bar_home_description = 2131165209;
@@ -3486,8 +3486,8 @@ namespace WorkPermitSystem
 			// aapt resource value: 0x7f07002b
 			public const int abc_toolbar_collapse_description = 2131165227;
 			
-			// aapt resource value: 0x7f070046
-			public const int app_name = 2131165254;
+			// aapt resource value: 0x7f07004a
+			public const int app_name = 2131165258;
 			
 			// aapt resource value: 0x7f070011
 			public const int appbar_scrolling_view_behavior = 2131165201;
@@ -3498,8 +3498,8 @@ namespace WorkPermitSystem
 			// aapt resource value: 0x7f070013
 			public const int character_counter_pattern = 2131165203;
 			
-			// aapt resource value: 0x7f070048
-			public const int close_drawer = 2131165256;
+			// aapt resource value: 0x7f07004c
+			public const int close_drawer = 2131165260;
 			
 			// aapt resource value: 0x7f070000
 			public const int common_google_play_services_enable_button = 2131165184;
@@ -3552,17 +3552,29 @@ namespace WorkPermitSystem
 			// aapt resource value: 0x7f07000f
 			public const int common_signin_button_text_long = 2131165199;
 			
-			// aapt resource value: 0x7f07003b
-			public const int firebase_database_url = 2131165243;
+			// aapt resource value: 0x7f07003c
+			public const int default_web_client_id = 2131165244;
+			
+			// aapt resource value: 0x7f07003d
+			public const int firebase_database_url = 2131165245;
 			
 			// aapt resource value: 0x7f07003a
 			public const int gcm_defaultSenderId = 2131165242;
 			
-			// aapt resource value: 0x7f07003c
-			public const int google_storage_bucket = 2131165244;
+			// aapt resource value: 0x7f07003e
+			public const int google_api_key = 2131165246;
 			
-			// aapt resource value: 0x7f070047
-			public const int open_drawer = 2131165255;
+			// aapt resource value: 0x7f07003b
+			public const int google_app_id = 2131165243;
+			
+			// aapt resource value: 0x7f07003f
+			public const int google_crash_reporting_api_key = 2131165247;
+			
+			// aapt resource value: 0x7f070040
+			public const int google_storage_bucket = 2131165248;
+			
+			// aapt resource value: 0x7f07004b
+			public const int open_drawer = 2131165259;
 			
 			// aapt resource value: 0x7f070014
 			public const int password_toggle_content_description = 2131165204;
@@ -3585,8 +3597,8 @@ namespace WorkPermitSystem
 			// aapt resource value: 0x7f07002d
 			public const int status_bar_notification_info_overflow = 2131165229;
 			
-			// aapt resource value: 0x7f07003d
-			public const int strBottomLine = 2131165245;
+			// aapt resource value: 0x7f070041
+			public const int strBottomLine = 2131165249;
 			
 			static String()
 			{
