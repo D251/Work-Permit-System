@@ -13,6 +13,7 @@ using Firebase.Iid;
 using Android.Preferences;
 using Newtonsoft.Json;
 using WorkPermitSystem.Models;
+using Firebase;
 
 namespace WorkPermitSystem
 {
@@ -33,6 +34,7 @@ namespace WorkPermitSystem
         {
             // Get updated InstanceID token.
             USERID = UserID.Trim();
+            FirebaseApp.InitializeApp(this);
             var refreshedToken = FirebaseInstanceId.Instance.Token;
             Android.Util.Log.Debug(TAG, "Refreshed token: " + refreshedToken);
 

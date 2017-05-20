@@ -13,6 +13,7 @@ using WorkPermitSystem.Models;
 using Firebase.Iid;
 using Android.Preferences;
 using WorkPermitSystem;
+using Firebase;
 
 namespace WorkPermitSystem.Activities
 {
@@ -357,6 +358,7 @@ namespace WorkPermitSystem.Activities
         const string TAG = "MyFirebaseIIDService";
         public void TokenNo()
         {
+            FirebaseApp.InitializeApp(this);
             DTI = FirebaseInstanceId.Instance.Token;
             Android.Util.Log.Debug(TAG, "Refreshed token: " + DTI);
 
