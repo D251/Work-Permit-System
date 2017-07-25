@@ -16,7 +16,7 @@ using WorkPermitSystem;
 
 namespace WorkPermitSystem.Activities
 {
-    [Activity(Label = "CheckVendorRequestDetailsForVendorActivity")]
+    [Activity(Label = "CheckVendorRequestDetailsForVendorActivity", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class CheckVendorRequestDetailsForVendorActivity : AppCompatActivity
     {
         TextView tvRequestID, tvEmployeeName, tvDepartment, tvVendorNAme, tvContractor, tvNatureOfWork, tvStartTime, tvEndTime, tvNoOfPerson, tvReasons;

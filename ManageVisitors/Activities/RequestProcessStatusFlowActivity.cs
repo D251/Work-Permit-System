@@ -16,7 +16,7 @@ using WorkPermitSystem;
 
 namespace WorkPermitSystem.Activities
 {
-    [Activity(Label = "RequestProcessStatusFlowActivity")]
+    [Activity(Label = "RequestProcessStatusFlowActivity", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class RequestProcessStatusFlowActivity : AppCompatActivity
     {
         TextView tvActivityOwner, tvAreaOwner, tvSafety, tvContractor;

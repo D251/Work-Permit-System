@@ -18,7 +18,7 @@ using WorkPermitSystem;
 
 namespace WorkPermitSystem.Activities
 {
-    [Activity(Label = "CheckVendorRequestForVendorsActivity")]
+    [Activity(Label = "CheckVendorRequestForVendorsActivity", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class CheckVendorRequestForVendorsActivity : AppCompatActivity
     {
         ListView lvVendorRequestList;

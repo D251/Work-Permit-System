@@ -27,6 +27,41 @@
         android:layout_height="0dip"
         android:layout_weight="0.6"
         android:padding="16dp">
+       <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:id="@+id/linearLayout4"
+            android:minWidth="25px"
+            android:minHeight="25px">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:typeface="sans"
+                android:gravity="center_vertical|right"
+                android:layout_gravity="center_vertical|left"
+                android:layout_centerInParent="true"
+                android:id="@+id/lblResult"
+                android:textSize="17dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="Area Owner : " />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:typeface="sans"
+                android:gravity="center_vertical|left"
+                android:layout_gravity="center_vertical|left"
+                android:layout_centerInParent="true"
+                android:id="@+id/lblAreaOwnerStatus"
+                android:textSize="17dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="Area Owner" />
+        </LinearLayout>
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="fill_parent"
@@ -61,41 +96,6 @@
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
                 android:text="Activity Owner" />
-        </LinearLayout>
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="fill_parent"
-            android:layout_height="0dip"
-            android:layout_weight="1"
-            android:id="@+id/linearLayout4"
-            android:minWidth="25px"
-            android:minHeight="25px">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="fill_parent"
-                android:layout_weight="1"
-                android:typeface="sans"
-                android:gravity="center_vertical|right"
-                android:layout_gravity="center_vertical|left"
-                android:layout_centerInParent="true"
-                android:id="@+id/lblResult"
-                android:textSize="17dp"
-                android:paddingStart="10dp"
-                android:paddingEnd="10dp"
-                android:text="Area Owner : " />
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="fill_parent"
-                android:layout_weight="1"
-                android:typeface="sans"
-                android:gravity="center_vertical|left"
-                android:layout_gravity="center_vertical|left"
-                android:layout_centerInParent="true"
-                android:id="@+id/lblAreaOwnerStatus"
-                android:textSize="17dp"
-                android:paddingStart="10dp"
-                android:paddingEnd="10dp"
-                android:text="Area Owner" />
         </LinearLayout>
         <LinearLayout
             android:orientation="horizontal"

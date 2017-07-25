@@ -20,7 +20,7 @@ using Firebase;
 
 namespace WorkPermitSystem.Activities
 {
-    [Activity(Label = "VendorNewRegistrationActivity")]
+    [Activity(Label = "VendorNewRegistrationActivity", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class VendorNewRegistrationActivity : AppCompatActivity
     {
         AutoCompleteTextView txt_VendorContractorName;

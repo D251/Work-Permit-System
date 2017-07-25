@@ -69,7 +69,7 @@
                                 android:layout_height="match_parent"
                                 android:layout_gravity="center"
                                 android:inputType="textEmailAddress"
-                                android:hint="Username"
+                                android:hint="UserID"
                                 android:textColor="#00008B" />
                         </android.support.design.widget.TextInputLayout>
                     </LinearLayout>

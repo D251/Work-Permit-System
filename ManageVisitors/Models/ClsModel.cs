@@ -25,7 +25,7 @@ namespace WorkPermitSystem.Models
         public static string RequestProcessSrNo = "";
         public static string EmployeeDesignationName = "";
         public static string Url = "http://softstudio.suvarnapp.com/Admin/AdminApiForMV/";
-        //public static string Url = "http://192.168.43.211:8770/Admin/AdminApiForMV/";
+        //public static string Url = "http://192.168.0.10:81/Admin/AdminApiForMV/";
     }
 
     //public string TokenNo()
@@ -47,7 +47,7 @@ namespace WorkPermitSystem.Models
     //    return Token;
     //}
 
-   
+
     public class ResultModel
     {
         public long success { get; set; }

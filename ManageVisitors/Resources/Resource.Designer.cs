@@ -2585,11 +2585,11 @@ namespace WorkPermitSystem
 			// aapt resource value: 0x7f0b00e3
 			public const int layout_main = 2131427555;
 			
-			// aapt resource value: 0x7f0b00dc
-			public const int lblActivityOwnerStatus = 2131427548;
-			
 			// aapt resource value: 0x7f0b00dd
-			public const int lblAreaOwnerStatus = 2131427549;
+			public const int lblActivityOwnerStatus = 2131427549;
+			
+			// aapt resource value: 0x7f0b00dc
+			public const int lblAreaOwnerStatus = 2131427548;
 			
 			// aapt resource value: 0x7f0b00df
 			public const int lblContractor = 2131427551;
