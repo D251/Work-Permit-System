@@ -16,7 +16,7 @@ using WorkPermitSystem;
 
 namespace WorkPermitSystem.Activities
 {
-    [Activity(Label = "CheckVendorRequestDetailsActivity")]
+    [Activity(Label = "CheckVendorRequestDetailsActivity", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class CheckVendorRequestDetailsActivity : AppCompatActivity
     {
         Button btnViewRequestAccept, btnViewRequestDecline;

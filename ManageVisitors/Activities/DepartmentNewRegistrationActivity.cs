@@ -17,7 +17,7 @@ using Firebase;
 
 namespace WorkPermitSystem.Activities
 {
-    [Activity(Label = "DepartmentNewRegistrationActivity", Icon = "@drawable/icon")]
+    [Activity(Label = "DepartmentNewRegistrationActivity", Icon = "@drawable/icon", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class DepartmentNewRegistrationActivity : AppCompatActivity
     {
         DepartmentEmployeeRegistrationModel _ObjDepartmentEmployeeRegistration = new DepartmentEmployeeRegistrationModel();

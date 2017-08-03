@@ -7,7 +7,7 @@ using WorkPermitSystem;
 
 namespace WorkPermitSystem
 {
-    [Activity(Label = "ManageVendors",  Icon = "@drawable/icon")]
+    [Activity(Label = "ManageVendors",  Icon = "@drawable/icon", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class MainActivity : Activity
     {
         protected override void OnCreate(Bundle bundle)

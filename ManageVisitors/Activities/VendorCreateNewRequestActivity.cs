@@ -19,7 +19,7 @@ using WorkPermitSystem;
 
 namespace WorkPermitSystem.Activities
 {
-    [Activity(Label = "VendorCreateNewRequestActivity", Icon = "@drawable/icon")]
+    [Activity(Label = "VendorCreateNewRequestActivity", Icon = "@drawable/icon", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class VendorCreateNewRequestActivity : AppCompatActivity
     {
         tbl_RequestProcess _ObjRequestProcess = new tbl_RequestProcess();

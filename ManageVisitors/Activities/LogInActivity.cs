@@ -21,7 +21,7 @@ using WorkPermitSystem;
 
 namespace WorkPermitSystem.Activities
 {
-    [Activity(Label = "LogInActivity")]
+    [Activity(Label = "LogInActivity", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     [Service]
     [IntentFilter(new[] { "com.google.firebase.INSTANCE_ID_EVENT" })]
     public class LogInActivity : AppCompatActivity

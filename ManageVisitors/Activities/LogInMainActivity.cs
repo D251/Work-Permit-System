@@ -16,7 +16,7 @@ using WorkPermitSystem;
 
 namespace WorkPermitSystem.Activities
 {
-    [Activity(Label = "WPS", MainLauncher = true, Icon = "@drawable/mahindralogo")]
+    [Activity(Label = "WPS", MainLauncher = true, Icon = "@drawable/mahindralogo", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class LogInMainActivity : Activity
     {
         Button btnDepartmentLogIn, btnVendorLogIn;
